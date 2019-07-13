@@ -11,11 +11,6 @@ public class ServerRunner {
     void appRunner() {
         try {
             server.checkIsPalindrome("Я И КОНЬ НОКИЯ");
-        } catch (StringNotPalindromeException e) {
-            System.out.println(e);
-        }
-
-        try {
             server.checkIsPalindrome("exceptions is cool");
         } catch (StringNotPalindromeException e) {
             System.out.println(e);
@@ -23,27 +18,20 @@ public class ServerRunner {
 
         try {
             server.processNumbers(13);
-        } catch (OddNumberException e) {
-            System.out.println(e);
-        } catch (NumberBiggerHundredException e) {
+        } catch (NumberBiggerHundredException | OddNumberException e) {
             System.out.println(e);
         }
 
         try {
             server.processNumbers(113);
-        } catch (OddNumberException e) {
-            System.out.println(e);
-        } catch (NumberBiggerHundredException e) {
+        } catch (NumberBiggerHundredException | OddNumberException e) {
             System.out.println(e);
         }
 
         try {
             server.processNumbers(88);
-        } catch (OddNumberException e) {
+        } catch (NumberBiggerHundredException | OddNumberException e) {
             System.out.println(e);
-        } catch (NumberBiggerHundredException e) {
-            System.out.println(e);
-            ;
         }
 
         Object o = null;
@@ -52,8 +40,5 @@ public class ServerRunner {
         } catch (MyOwnNullPointerException e) {
             System.out.println(e);
         }
-
     }
-
-
 }
