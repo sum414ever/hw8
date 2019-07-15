@@ -1,6 +1,6 @@
 package com.company.server;
 
-import com.company.server.exceptions.MyOwnNullPointerException;
+import com.company.server.exceptions.CustomNullPointerException;
 import com.company.server.exceptions.NumberBiggerHundredException;
 import com.company.server.exceptions.OddNumberException;
 import com.company.server.exceptions.StringNotPalindromeException;
@@ -23,9 +23,9 @@ public class Server {
             System.out.println("Dude, your number " + number + " is les than 100 and not odd and it`s cool!!!");
     }
 
-    void checkIsObjectNotNull(Object o) throws MyOwnNullPointerException {
-        if (o == null) {
-            throw new MyOwnNullPointerException(o);
+    void checkIsObjectNotNull(Object obj) throws CustomNullPointerException {
+        if (obj == null) {
+            throw new CustomNullPointerException(obj);
         } else
             System.out.println("Dude, your object is not null");
     }

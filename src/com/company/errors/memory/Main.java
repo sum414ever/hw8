@@ -1,4 +1,4 @@
-package com.company.outOfMemoryError;
+package com.company.errors.memory;
 
 public class Main {
 

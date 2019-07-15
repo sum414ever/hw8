@@ -1,4 +1,4 @@
-package com.company.stackOverflowError;
+package com.company.errors.stack;
 
 public class StackOverflowErrorRun {
 

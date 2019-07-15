@@ -1,6 +1,6 @@
 package com.company.server;
 
-import com.company.server.exceptions.MyOwnNullPointerException;
+import com.company.server.exceptions.CustomNullPointerException;
 import com.company.server.exceptions.NumberBiggerHundredException;
 import com.company.server.exceptions.OddNumberException;
 import com.company.server.exceptions.StringNotPalindromeException;
@@ -37,7 +37,7 @@ public class ServerRunner {
         Object o = null;
         try {
             server.checkIsObjectNotNull(o);
-        } catch (MyOwnNullPointerException e) {
+        } catch (CustomNullPointerException e) {
             System.out.println(e);
         }
     }
